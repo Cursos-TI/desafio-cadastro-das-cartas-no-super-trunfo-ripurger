@@ -88,52 +88,26 @@ int main() {
     printf("PIB per Capita: %.2f\n", pib_per_capita2);
 
 
-        // Comparação de População
-        if (populacao1 > populacao2) {
-            printf("Comparacao de Populacao: Carta 1 vence\n");
-        } else {
-            printf("Comparacao de Populacao: Carta 2 vence\n");
-        }
-    
-        // Comparação de Área
-        if (area1 > area2) {
-            printf("Comparacao de Area: Carta 1 vence\n");
-        } else {
-            printf("Comparacao de Area: Carta 2 vence\n");
-        }
-    
-        // Comparação de PIB
-        if (pib1 > pib2) {
-            printf("Comparacao de PIB: Carta 1 vence\n");
-        } else {
-            printf("Comparacao de PIB: Carta 2 vence\n");
-        }
-    
-        // Comparação de Pontos Turísticos
-        if (pontos_turisticos1 > pontos_turisticos2) {
-            printf("Comparacao de Pontos Turisticos: Carta 1 vence\n");
-        } else {
-            printf("Comparacao de Pontos Turisticos: Carta 2 vence\n");
-        }
-    
-        // Comparação de Densidade Populacional (menor valor vence)
-        if (densidade1 < densidade2) {
-            printf("Comparacao de Densidade Populacional: Carta 1 vence\n");
-        } else {
-            printf("Comparacao de Densidade Populacional: Carta 2 vence\n");
-        }
-    
-        // Cálculo do Super Poder (soma de PIB, População, e Pontos Turísticos)
-        float super_poder1 = pib1 + populacao1 + pontos_turisticos1;
-        float super_poder2 = pib2 + populacao2 + pontos_turisticos2;
-    
-        // Comparação do Super Poder
-        if (super_poder1 > super_poder2) {
-            printf("Super Poder: Carta 1 vence\n");
-        } else {
-            printf("Super Poder: Carta 2 vence\n");
-        }
+         // Comparação dos atributos
+    int resultado_populacao = (populacao1 > populacao2) ? 1 : 0;
+    int resultado_area = (area1 > area2) ? 1 : 0;
+    int resultado_pib = (pib1 > pib2) ? 1 : 0;
+    int resultado_pontos_turisticos = (pontos_turisticos1 > pontos_turisticos2) ? 1 : 0;
+    int resultado_densidade = (densidade1 < densidade2) ? 1 : 0; 
 
+    // Cálculo do Super Poder (soma de PIB, População, e Pontos Turísticos)
+    float super_poder1 = pib1 + populacao1 + pontos_turisticos1;
+    float super_poder2 = pib2 + populacao2 + pontos_turisticos2;
+    int resultado_super_poder = (super_poder1 > super_poder2) ? 1 : 0;
+
+    // Exibição dos resultados
+    printf("\n--- Resultados da Comparacao ---\n");
+    printf("Comparacao de Populacao: Carta 1 vence? %d\n", resultado_populacao);
+    printf("Comparacao de Area: Carta 1 vence? %d\n", resultado_area);
+    printf("Comparacao de PIB: Carta 1 vence? %d\n", resultado_pib);
+    printf("Comparacao de Pontos Turisticos: Carta 1 vence? %d\n", resultado_pontos_turisticos);
+    printf("Comparacao de Densidade Populacional: Carta 1 vence? %d\n", resultado_densidade);
+    printf("Super Poder: Carta 1 vence? %d\n", resultado_super_poder
    
 
 
