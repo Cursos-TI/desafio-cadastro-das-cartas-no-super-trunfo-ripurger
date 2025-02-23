@@ -75,7 +75,7 @@ int main() {
     printf("PIB: %.2f bilhões\n", pib1);
     printf("Pontos turisticos: %d\n", pontos_turisticos1);
     printf("Densidade Populacional: %.2f habitantes por km^2\n", densidade1);
-    printf("PIB per Capita: %.2f\n", pib_per_capita1)
+    printf("PIB per Capita: %.2f\n", pib_per_capita1);
 
     printf("\n--- Dados da Carta B02 ---\n");
     printf("Estado: %s\n", estado2);
@@ -86,6 +86,55 @@ int main() {
     printf("Pontos turisticos: %d\n", pontos_turisticos2);
     printf("Densidade Populacional: %.2f habitantes por km^2\n", densidade2);
     printf("PIB per Capita: %.2f\n", pib_per_capita2);
+
+
+        // Comparação de População
+        if (populacao1 > populacao2) {
+            printf("Comparacao de Populacao: Carta 1 vence\n");
+        } else {
+            printf("Comparacao de Populacao: Carta 2 vence\n");
+        }
+    
+        // Comparação de Área
+        if (area1 > area2) {
+            printf("Comparacao de Area: Carta 1 vence\n");
+        } else {
+            printf("Comparacao de Area: Carta 2 vence\n");
+        }
+    
+        // Comparação de PIB
+        if (pib1 > pib2) {
+            printf("Comparacao de PIB: Carta 1 vence\n");
+        } else {
+            printf("Comparacao de PIB: Carta 2 vence\n");
+        }
+    
+        // Comparação de Pontos Turísticos
+        if (pontos_turisticos1 > pontos_turisticos2) {
+            printf("Comparacao de Pontos Turisticos: Carta 1 vence\n");
+        } else {
+            printf("Comparacao de Pontos Turisticos: Carta 2 vence\n");
+        }
+    
+        // Comparação de Densidade Populacional (menor valor vence)
+        if (densidade1 < densidade2) {
+            printf("Comparacao de Densidade Populacional: Carta 1 vence\n");
+        } else {
+            printf("Comparacao de Densidade Populacional: Carta 2 vence\n");
+        }
+    
+        // Cálculo do Super Poder (soma de PIB, População, e Pontos Turísticos)
+        float super_poder1 = pib1 + populacao1 + pontos_turisticos1;
+        float super_poder2 = pib2 + populacao2 + pontos_turisticos2;
+    
+        // Comparação do Super Poder
+        if (super_poder1 > super_poder2) {
+            printf("Super Poder: Carta 1 vence\n");
+        } else {
+            printf("Super Poder: Carta 2 vence\n");
+        }
+
+   
 
 
     return 0;
