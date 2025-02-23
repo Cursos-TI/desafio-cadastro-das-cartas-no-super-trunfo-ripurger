@@ -102,12 +102,12 @@ int main() {
 
     // Exibição dos resultados
     printf("\n--- Resultados da Comparacao ---\n");
-    printf("Comparacao de Populacao: Carta 1 vence? resultado para 1 se sim e 0 para não: %d\n", resultado_populacao);
-    printf("Comparacao de Area: Carta 1 vence? resultado para 1 se sim e 0 para não: %d\n", resultado_area);
-    printf("Comparacao de PIB: Carta 1 vence? resultado para 1 se sim e 0 para não: %d\n", resultado_pib);
-    printf("Comparacao de Pontos Turisticos: Carta 1 vence? resultado para 1 se sim e 0 para não: %d\n", resultado_pontos_turisticos);
-    printf("Comparacao de Densidade Populacional: Carta 1 vence? resultado para 1 se sim e 0 para não: %d\n", resultado_densidade);
-    printf("Super Poder: Carta 1 vence? resultado para 1 se sim e 0 para não: %d\n", resultado_super_poder);
+    printf("Comparacao de Populacao: Carta 1 vence? %d\n", resultado_populacao);
+    printf("Comparacao de Area: Carta 1 vence? %d\n", resultado_area);
+    printf("Comparacao de PIB: Carta 1 vence? %d\n", resultado_pib);
+    printf("Comparacao de Pontos Turisticos: Carta 1 vence? %d\n", resultado_pontos_turisticos);
+    printf("Comparacao de Densidade Populacional: Carta 1 vence? %d\n", resultado_densidade);
+    printf("Super Poder: Carta 1 vence? %d\n", resultado_super_poder
    
 
 
