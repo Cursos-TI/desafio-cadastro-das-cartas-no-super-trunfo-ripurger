@@ -51,6 +51,10 @@ int main() {
     densidade2 = populacao2 / area2;  // Densidade Populacional
     pib_per_capita2 = pib2 * 1e9 / populacao2;  // PIB per Capita (convertendo PIB para reais)
 
+    // Variáveis do Super Poder (declaradas fora do switch)
+    float super_poder1 = pib1 + populacao1 + pontos_turisticos1;
+    float super_poder2 = pib2 + populacao2 + pontos_turisticos2;
+
     // Variável para selecionar o atributo a ser comparado
     int atributo;
 
@@ -118,8 +122,6 @@ int main() {
             break;
         
         case 6: // Comparação do Super Poder
-            float super_poder1 = pib1 + populacao1 + pontos_turisticos1;
-            float super_poder2 = pib2 + populacao2 + pontos_turisticos2;
             if (super_poder1 > super_poder2) {
                 printf("Super Poder: Carta 1 vence\n");
             } else if (super_poder1 < super_poder2) {
@@ -136,3 +138,4 @@ int main() {
 
     return 0;
 }
+
