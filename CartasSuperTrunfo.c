@@ -51,51 +51,87 @@ int main() {
     densidade2 = populacao2 / area2;  // Densidade Populacional
     pib_per_capita2 = pib2 * 1e9 / populacao2;  // PIB per Capita (convertendo PIB para reais)
 
-    // Comparação dos atributos usando if-else com printf
-    // Comparação de População
-    if (populacao1 > populacao2) {
-        printf("Comparacao de Populacao: Carta 1 vence\n");
-    } else {
-        printf("Comparacao de Populacao: Carta 2 vence\n");
-    }
+    // Variável para selecionar o atributo a ser comparado
+    int atributo;
 
-    // Comparação de Área
-    if (area1 > area2) {
-        printf("Comparacao de Area: Carta 1 vence\n");
-    } else {
-        printf("Comparacao de Area: Carta 2 vence\n");
-    }
+    // Menu de seleção de atributo
+    printf("\nEscolha o atributo para comparar:\n");
+    printf("1 - Populacao\n");
+    printf("2 - Area\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos Turisticos\n");
+    printf("5 - Densidade Populacional\n");
+    printf("6 - Super Poder\n");
+    printf("Digite o número do atributo que deseja comparar: ");
+    scanf("%d", &atributo);
 
-    // Comparação de PIB
-    if (pib1 > pib2) {
-        printf("Comparacao de PIB: Carta 1 vence\n");
-    } else {
-        printf("Comparacao de PIB: Carta 2 vence\n");
-    }
+    // Comparação usando switch case para selecionar o atributo
+    switch (atributo) {
+        case 1: // Comparação de População
+            if (populacao1 > populacao2) {
+                printf("Comparacao de Populacao: Carta 1 vence\n");
+            } else if (populacao1 < populacao2) {
+                printf("Comparacao de Populacao: Carta 2 vence\n");
+            } else {
+                printf("Comparacao de Populacao: Empate\n");
+            }
+            break;
+        
+        case 2: // Comparação de Área
+            if (area1 > area2) {
+                printf("Comparacao de Area: Carta 1 vence\n");
+            } else if (area1 < area2) {
+                printf("Comparacao de Area: Carta 2 vence\n");
+            } else {
+                printf("Comparacao de Area: Empate\n");
+            }
+            break;
+        
+        case 3: // Comparação de PIB
+            if (pib1 > pib2) {
+                printf("Comparacao de PIB: Carta 1 vence\n");
+            } else if (pib1 < pib2) {
+                printf("Comparacao de PIB: Carta 2 vence\n");
+            } else {
+                printf("Comparacao de PIB: Empate\n");
+            }
+            break;
+        
+        case 4: // Comparação de Pontos Turísticos
+            if (pontos_turisticos1 > pontos_turisticos2) {
+                printf("Comparacao de Pontos Turisticos: Carta 1 vence\n");
+            } else if (pontos_turisticos1 < pontos_turisticos2) {
+                printf("Comparacao de Pontos Turisticos: Carta 2 vence\n");
+            } else {
+                printf("Comparacao de Pontos Turisticos: Empate\n");
+            }
+            break;
+        
+        case 5: // Comparação de Densidade Populacional (menor valor vence)
+            if (densidade1 < densidade2) {
+                printf("Comparacao de Densidade Populacional: Carta 1 vence\n");
+            } else if (densidade1 > densidade2) {
+                printf("Comparacao de Densidade Populacional: Carta 2 vence\n");
+            } else {
+                printf("Comparacao de Densidade Populacional: Empate\n");
+            }
+            break;
+        
+        case 6: // Comparação do Super Poder
+            float super_poder1 = pib1 + populacao1 + pontos_turisticos1;
+            float super_poder2 = pib2 + populacao2 + pontos_turisticos2;
+            if (super_poder1 > super_poder2) {
+                printf("Super Poder: Carta 1 vence\n");
+            } else if (super_poder1 < super_poder2) {
+                printf("Super Poder: Carta 2 vence\n");
+            } else {
+                printf("Super Poder: Empate\n");
+            }
+            break;
 
-    // Comparação de Pontos Turísticos
-    if (pontos_turisticos1 > pontos_turisticos2) {
-        printf("Comparacao de Pontos Turisticos: Carta 1 vence\n");
-    } else {
-        printf("Comparacao de Pontos Turisticos: Carta 2 vence\n");
-    }
-
-    // Comparação de Densidade Populacional (menor valor vence)
-    if (densidade1 < densidade2) {
-        printf("Comparacao de Densidade Populacional: Carta 1 vence\n");
-    } else {
-        printf("Comparacao de Densidade Populacional: Carta 2 vence\n");
-    }
-
-    // Cálculo do Super Poder (soma de PIB, População, e Pontos Turísticos)
-    float super_poder1 = pib1 + populacao1 + pontos_turisticos1;
-    float super_poder2 = pib2 + populacao2 + pontos_turisticos2;
-
-    // Comparação do Super Poder
-    if (super_poder1 > super_poder2) {
-        printf("Super Poder: Carta 1 vence\n");
-    } else {
-        printf("Super Poder: Carta 2 vence\n");
+        default:
+            printf("Opção inválida!\n");
+            break;
     }
 
     return 0;
